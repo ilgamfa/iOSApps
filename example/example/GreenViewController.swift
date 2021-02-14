@@ -8,10 +8,12 @@
 import UIKit
 
 class GreenViewController: UIViewController {
-
+    var textFromVC:String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        title = textFromVC
     }
     
     @IBAction func GoToRoot(_ sender: UIButton) {

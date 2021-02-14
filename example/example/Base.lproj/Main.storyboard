@@ -44,18 +44,27 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <state key="normal" title="Зеленый экран"/>
                                 <connections>
-                                    <action selector="GoToGreen:" destination="xwD-aG-XAO" eventType="touchUpInside" id="Tp1-jr-atd"/>
+                                    <segue destination="SyX-3a-a61" kind="show" id="eRu-j1-Ehq"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="q2c-ZH-8QD">
+                                <rect key="frame" x="68" y="263" width="286" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="FJc-Dt-9uU"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="Настройки" id="Qah-cG-1fb"/>
+                    <connections>
+                        <outlet property="textField" destination="q2c-ZH-8QD" id="b9u-Ly-lHa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aKZ-VK-u93" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1842" y="65"/>
+            <point key="canvasLocation" x="1840.5797101449277" y="64.955357142857139"/>
         </scene>
         <!--Green View Controller-->
         <scene sceneID="bmR-4T-anh">
@@ -78,6 +87,7 @@
                         <viewLayoutGuide key="safeArea" id="cGJ-Cw-x1x"/>
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="ePf-1p-fEU"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="epa-PC-8ZA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
