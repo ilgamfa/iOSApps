@@ -1,9 +1,0 @@
-struct StudentStruct {
-    
-    
-}
-
-class StudentClass {
-    
-    
-}
