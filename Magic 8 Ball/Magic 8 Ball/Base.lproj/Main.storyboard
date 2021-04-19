@@ -16,35 +16,93 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backgroung1" translatesAutoresizingMaskIntoConstraints="NO" id="lh6-mO-lWj">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroung1" translatesAutoresizingMaskIntoConstraints="NO" id="lh6-mO-lWj">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ask Me Anithing..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nEJ-2g-7nJ">
-                                <rect key="frame" x="61" y="224" width="292" height="75"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="35"/>
-                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.84999999999999998" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ball-4" translatesAutoresizingMaskIntoConstraints="NO" id="iRS-BZ-pah">
-                                <rect key="frame" x="80" y="355" width="254" height="165"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NkG-XH-GqU">
-                                <rect key="frame" x="150" y="681" width="121" height="51"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="35"/>
-                                <state key="normal" title="Answer!">
-                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="AnswerAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uyg-IS-OvD"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="WaI-wU-WzW">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CAW-oN-O0v">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="282.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ask Me Anithing..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nEJ-2g-7nJ">
+                                                <rect key="frame" x="74" y="122" width="266" height="38.5"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="35"/>
+                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="nEJ-2g-7nJ" firstAttribute="centerY" secondItem="CAW-oN-O0v" secondAttribute="centerY" id="QUf-Dp-aap"/>
+                                            <constraint firstItem="nEJ-2g-7nJ" firstAttribute="centerX" secondItem="CAW-oN-O0v" secondAttribute="centerX" id="gqG-km-NAX"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HoM-wy-g4H">
+                                        <rect key="frame" x="0.0" y="284.5" width="414" height="283"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ball-1" translatesAutoresizingMaskIntoConstraints="NO" id="iRS-BZ-pah">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="283"/>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="iRS-BZ-pah" firstAttribute="top" secondItem="HoM-wy-g4H" secondAttribute="top" id="2UW-cg-e1j"/>
+                                            <constraint firstItem="iRS-BZ-pah" firstAttribute="leading" secondItem="HoM-wy-g4H" secondAttribute="leading" id="6oG-2z-FD5"/>
+                                            <constraint firstItem="iRS-BZ-pah" firstAttribute="leading" secondItem="HoM-wy-g4H" secondAttribute="leading" id="HLB-7d-MMH"/>
+                                            <constraint firstAttribute="bottom" secondItem="iRS-BZ-pah" secondAttribute="bottom" id="Lbd-kC-VXm"/>
+                                            <constraint firstAttribute="bottom" secondItem="iRS-BZ-pah" secondAttribute="bottom" id="MDT-q0-lE5"/>
+                                            <constraint firstItem="iRS-BZ-pah" firstAttribute="leading" secondItem="HoM-wy-g4H" secondAttribute="leading" constant="46" id="XXX-uz-cKh"/>
+                                            <constraint firstAttribute="trailing" secondItem="iRS-BZ-pah" secondAttribute="trailing" constant="49" id="jRm-Kj-TOk"/>
+                                            <constraint firstItem="iRS-BZ-pah" firstAttribute="top" secondItem="HoM-wy-g4H" secondAttribute="top" id="kvg-e9-n35"/>
+                                            <constraint firstAttribute="trailing" secondItem="iRS-BZ-pah" secondAttribute="trailing" id="oct-h4-WP6"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lvz-Mo-Yqk">
+                                        <rect key="frame" x="0.0" y="569.5" width="414" height="282.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NkG-XH-GqU">
+                                                <rect key="frame" x="146.5" y="115.5" width="121" height="51"/>
+                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="35"/>
+                                                <state key="normal" title="Answer!">
+                                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="AnswerAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uyg-IS-OvD"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="NkG-XH-GqU" firstAttribute="centerX" secondItem="Lvz-Mo-Yqk" secondAttribute="centerX" id="NID-ld-QOF"/>
+                                            <constraint firstItem="NkG-XH-GqU" firstAttribute="centerY" secondItem="Lvz-Mo-Yqk" secondAttribute="centerY" id="pO4-8n-5BB"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Lvz-Mo-Yqk" secondAttribute="bottom" id="IY5-SV-oTk"/>
+                                    <constraint firstItem="HoM-wy-g4H" firstAttribute="leading" secondItem="WaI-wU-WzW" secondAttribute="leading" id="XrE-Ur-Uam"/>
+                                    <constraint firstAttribute="trailing" secondItem="CAW-oN-O0v" secondAttribute="trailing" id="biJ-t8-kbG"/>
+                                    <constraint firstAttribute="trailing" secondItem="Lvz-Mo-Yqk" secondAttribute="trailing" id="cJt-xI-Fa7"/>
+                                    <constraint firstItem="CAW-oN-O0v" firstAttribute="top" secondItem="WaI-wU-WzW" secondAttribute="top" id="dEy-Dr-SlE"/>
+                                    <constraint firstItem="Lvz-Mo-Yqk" firstAttribute="top" secondItem="HoM-wy-g4H" secondAttribute="bottom" constant="2" id="hGu-Cy-Vwm"/>
+                                    <constraint firstItem="CAW-oN-O0v" firstAttribute="leading" secondItem="WaI-wU-WzW" secondAttribute="leading" id="kbi-bx-TeA"/>
+                                    <constraint firstItem="Lvz-Mo-Yqk" firstAttribute="top" secondItem="HoM-wy-g4H" secondAttribute="bottom" constant="2" id="rWM-wS-ozF"/>
+                                    <constraint firstItem="Lvz-Mo-Yqk" firstAttribute="leading" secondItem="WaI-wU-WzW" secondAttribute="leading" id="vNj-MK-BjR"/>
+                                    <constraint firstItem="HoM-wy-g4H" firstAttribute="top" secondItem="CAW-oN-O0v" secondAttribute="bottom" constant="2" id="wpI-mM-bUw"/>
+                                    <constraint firstAttribute="trailing" secondItem="HoM-wy-g4H" secondAttribute="trailing" id="zg5-zw-Iec"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="WaI-wU-WzW" secondAttribute="bottom" id="17P-VC-NJF"/>
+                            <constraint firstItem="lh6-mO-lWj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="CqO-cq-bYw"/>
+                            <constraint firstItem="lh6-mO-lWj" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="DLy-px-or2"/>
+                            <constraint firstAttribute="trailing" secondItem="lh6-mO-lWj" secondAttribute="trailing" id="IBU-bv-3NN"/>
+                            <constraint firstAttribute="bottom" secondItem="lh6-mO-lWj" secondAttribute="bottom" id="R91-tP-3rQ"/>
+                            <constraint firstItem="WaI-wU-WzW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Uln-fL-I8G"/>
+                            <constraint firstItem="WaI-wU-WzW" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Uw7-d8-Hcr"/>
+                            <constraint firstItem="WaI-wU-WzW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="lLb-St-Zbe"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="imageBallView" destination="iRS-BZ-pah" id="3CD-aw-Dha"/>
@@ -57,7 +115,7 @@
     </scenes>
     <resources>
         <image name="backgroung1" width="640" height="1136"/>
-        <image name="ball-4" width="305" height="273.5"/>
+        <image name="ball-1" width="305" height="273.5"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
