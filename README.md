@@ -1,1 +1,1 @@
-Animation app using ViewAnimator framework to show examples
+DiceRoll, EggTimer, Magic 8 Ball, Xylophone from The Complete iOS Development Bootcamp
