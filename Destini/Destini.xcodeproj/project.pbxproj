@@ -15,6 +15,8 @@
 		BB36B309263460FA00075CF8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB36B307263460FA00075CF8 /* LaunchScreen.storyboard */; };
 		BB36B31826346F0500075CF8 /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB36B31726346F0500075CF8 /* Story.swift */; };
 		BB36B31B263485B700075CF8 /* StoryBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB36B31A263485B700075CF8 /* StoryBrain.swift */; };
+		BB36B31F2634C12B00075CF8 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB36B31E2634C12B00075CF8 /* StartViewController.swift */; };
+		BB36B3222634C43300075CF8 /* AnotherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB36B3212634C43300075CF8 /* AnotherViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		BB36B30A263460FA00075CF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BB36B31726346F0500075CF8 /* Story.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
 		BB36B31A263485B700075CF8 /* StoryBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryBrain.swift; sourceTree = "<group>"; };
+		BB36B31E2634C12B00075CF8 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		BB36B3212634C43300075CF8 /* AnotherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnotherViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +79,8 @@
 		BB36B3112634610300075CF8 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				BB36B3212634C43300075CF8 /* AnotherViewController.swift */,
+				BB36B31E2634C12B00075CF8 /* StartViewController.swift */,
 				BB36B300263460F700075CF8 /* ViewController.swift */,
 			);
 			path = Controller;
@@ -170,8 +176,10 @@
 				BB36B31B263485B700075CF8 /* StoryBrain.swift in Sources */,
 				BB36B301263460F700075CF8 /* ViewController.swift in Sources */,
 				BB36B2FD263460F700075CF8 /* AppDelegate.swift in Sources */,
+				BB36B3222634C43300075CF8 /* AnotherViewController.swift in Sources */,
 				BB36B2FF263460F700075CF8 /* SceneDelegate.swift in Sources */,
 				BB36B31826346F0500075CF8 /* Story.swift in Sources */,
+				BB36B31F2634C12B00075CF8 /* StartViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
