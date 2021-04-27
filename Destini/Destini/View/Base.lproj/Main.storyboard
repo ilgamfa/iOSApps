@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Mcc-0j-dVm">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="landscape" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,47 +13,64 @@
             <objects>
                 <viewController storyboardIdentifier="StartViewController" id="Mcc-0j-dVm" customClass="StartViewController" customModule="Destini" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zax-sK-lMK">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="0by-Qa-ePU">
-                                <rect key="frame" x="-2" y="0.0" width="416" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="0by-Qa-ePU">
+                                <rect key="frame" x="-2" y="0.0" width="898" height="414"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Сhoose your story" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hmd-Q7-7HQ">
-                                <rect key="frame" x="86" y="198" width="243" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n7R-fU-y0F">
-                                <rect key="frame" x="78" y="449" width="257" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
-                                <state key="normal" title="1. Strange things on the road">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="firstStoryButton:" destination="Mcc-0j-dVm" eventType="touchUpInside" id="GTJ-0J-7Nv"/>
-                                    <segue destination="BYZ-38-t0r" kind="showDetail" id="jUh-0j-807"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HyC-wo-U9i">
-                                <rect key="frame" x="78" y="504" width="257" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
-                                <state key="normal" title="2. Another strange story">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="secondStoryButton:" destination="Mcc-0j-dVm" eventType="touchUpInside" id="mwE-CU-4FQ"/>
-                                    <segue destination="2lG-1M-Y0H" kind="show" id="Unz-V7-WbC"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="7E0-s0-9rX">
+                                <rect key="frame" x="80" y="0.0" width="736" height="393"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Сhoose your story" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hmd-Q7-7HQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="736" height="253"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n7R-fU-y0F">
+                                        <rect key="frame" x="0.0" y="273" width="736" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="Psx-xw-B5A"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                        <state key="normal" title="1. Strange things on the road">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="firstStoryButton:" destination="Mcc-0j-dVm" eventType="touchUpInside" id="GTJ-0J-7Nv"/>
+                                            <segue destination="BYZ-38-t0r" kind="showDetail" id="jUh-0j-807"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HyC-wo-U9i">
+                                        <rect key="frame" x="0.0" y="353" width="736" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Cwe-g6-e3z"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                        <state key="normal" title="2. Another strange story">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="secondStoryButton:" destination="Mcc-0j-dVm" eventType="touchUpInside" id="mwE-CU-4FQ"/>
+                                            <segue destination="2lG-1M-Y0H" kind="show" id="Unz-V7-WbC"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="WFX-RY-evp"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="7E0-s0-9rX" secondAttribute="trailing" constant="20" id="0Ec-0m-bfy"/>
+                            <constraint firstAttribute="trailing" secondItem="0by-Qa-ePU" secondAttribute="trailing" id="Jc6-zX-gDa"/>
+                            <constraint firstItem="7E0-s0-9rX" firstAttribute="top" secondItem="WFX-RY-evp" secondAttribute="top" id="JkL-do-dE5"/>
+                            <constraint firstAttribute="bottom" secondItem="0by-Qa-ePU" secondAttribute="bottom" id="MKu-Zi-Hud"/>
+                            <constraint firstItem="7E0-s0-9rX" firstAttribute="leading" secondItem="zax-sK-lMK" secondAttribute="leadingMargin" constant="20" id="ONq-ya-Lxy"/>
+                            <constraint firstItem="0by-Qa-ePU" firstAttribute="top" secondItem="zax-sK-lMK" secondAttribute="top" id="XWr-mu-IQ4"/>
+                            <constraint firstItem="WFX-RY-evp" firstAttribute="bottom" secondItem="7E0-s0-9rX" secondAttribute="bottom" id="nxE-bT-Cbi"/>
+                            <constraint firstItem="0by-Qa-ePU" firstAttribute="leading" secondItem="zax-sK-lMK" secondAttribute="leading" constant="-2" id="tRS-XS-Ppc"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T0K-AQ-cYj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -65,23 +82,23 @@
             <objects>
                 <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="Destini" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mq2-kD-RIw">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="l8w-9n-UhZ">
-                                <rect key="frame" x="-2" y="0.0" width="416" height="842"/>
+                                <rect key="frame" x="-2" y="0.0" width="898" height="414"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="27g-jr-yqc">
-                                <rect key="frame" x="20" y="0.0" width="374" height="808"/>
+                                <rect key="frame" x="64" y="0.0" width="812" height="393"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Story Text" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="iBe-SU-EBM" userLabel="Story Label">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="566"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="812" height="151"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="dbK-tf-K7J">
-                                        <rect key="frame" x="0.0" y="587" width="374" height="100"/>
+                                        <rect key="frame" x="0.0" y="172" width="812" height="100"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="doR-92-b64"/>
                                         </constraints>
@@ -92,7 +109,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="XZg-Tt-Mfp">
-                                        <rect key="frame" x="0.0" y="708" width="374" height="100"/>
+                                        <rect key="frame" x="0.0" y="293" width="812" height="100"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="mIv-pc-oca"/>
                                         </constraints>
@@ -128,34 +145,38 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="133" y="86"/>
+            <point key="canvasLocation" x="-116" y="-358"/>
         </scene>
         <!--Another View Controller-->
         <scene sceneID="iLY-kF-mIc">
             <objects>
                 <viewController storyboardIdentifier="AnotherViewController" id="2lG-1M-Y0H" customClass="AnotherViewController" customModule="Destini" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yDi-1L-VnS">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="QGP-jI-949">
-                                <rect key="frame" x="-2" y="-44" width="416" height="886"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="QGP-jI-949">
+                                <rect key="frame" x="-2" y="0.0" width="898" height="414"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Ooops" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3GR-Tu-dt9">
-                                <rect key="frame" x="162" y="289" width="89" height="36"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="The story is not ready yet" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6uA-Xp-hUi">
-                                <rect key="frame" x="40" y="430" width="333" height="36"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C9Q-IV-ynR">
-                                <rect key="frame" x="41" y="739" width="333" height="36"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="vTD-uB-DWe">
+                                <rect key="frame" x="287.5" y="161" width="321.5" height="92"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ooops" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3GR-Tu-dt9">
+                                        <rect key="frame" x="0.0" y="0.0" width="321.5" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The story is not ready yet" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6uA-Xp-hUi">
+                                        <rect key="frame" x="0.0" y="56" width="321.5" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="29"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C9Q-IV-ynR">
+                                <rect key="frame" x="64" y="337" width="768" height="36"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                 <state key="normal" title="Click to return to the list stories">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -169,12 +190,15 @@
                         <viewLayoutGuide key="safeArea" id="8IP-GH-tBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6uA-Xp-hUi" firstAttribute="leading" secondItem="8IP-GH-tBY" secondAttribute="leading" constant="40" id="1e8-29-tF9"/>
-                            <constraint firstItem="8IP-GH-tBY" firstAttribute="trailing" secondItem="3GR-Tu-dt9" secondAttribute="trailing" constant="163" id="3rl-wG-qDv"/>
-                            <constraint firstItem="8IP-GH-tBY" firstAttribute="trailing" secondItem="C9Q-IV-ynR" secondAttribute="trailing" constant="40" id="HnW-PS-tst"/>
-                            <constraint firstItem="3GR-Tu-dt9" firstAttribute="leading" secondItem="8IP-GH-tBY" secondAttribute="leading" constant="162" id="Pkw-Xa-xMt"/>
-                            <constraint firstItem="8IP-GH-tBY" firstAttribute="trailing" secondItem="6uA-Xp-hUi" secondAttribute="trailing" constant="41" id="aio-e3-zgP"/>
-                            <constraint firstItem="C9Q-IV-ynR" firstAttribute="leading" secondItem="8IP-GH-tBY" secondAttribute="leading" constant="41" id="gyt-cd-Bnq"/>
+                            <constraint firstItem="QGP-jI-949" firstAttribute="top" secondItem="8IP-GH-tBY" secondAttribute="top" id="7zN-h5-jKY"/>
+                            <constraint firstItem="C9Q-IV-ynR" firstAttribute="leading" secondItem="8IP-GH-tBY" secondAttribute="leading" constant="20" id="EH5-eo-OD7"/>
+                            <constraint firstItem="8IP-GH-tBY" firstAttribute="trailing" secondItem="C9Q-IV-ynR" secondAttribute="trailing" constant="20" id="IXK-jH-WgI"/>
+                            <constraint firstAttribute="bottom" secondItem="QGP-jI-949" secondAttribute="bottom" id="MCr-oA-QaD"/>
+                            <constraint firstItem="vTD-uB-DWe" firstAttribute="centerY" secondItem="yDi-1L-VnS" secondAttribute="centerY" id="dza-PD-Lkx"/>
+                            <constraint firstAttribute="trailing" secondItem="QGP-jI-949" secondAttribute="trailing" id="jzk-nv-IRq"/>
+                            <constraint firstItem="8IP-GH-tBY" firstAttribute="bottom" secondItem="C9Q-IV-ynR" secondAttribute="bottom" constant="20" id="pJG-4z-Lkg"/>
+                            <constraint firstItem="vTD-uB-DWe" firstAttribute="centerX" secondItem="yDi-1L-VnS" secondAttribute="centerX" id="uUg-Cv-YNx"/>
+                            <constraint firstItem="QGP-jI-949" firstAttribute="leading" secondItem="yDi-1L-VnS" secondAttribute="leading" constant="-2" id="xST-jX-c3l"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="NjJ-Lo-7Gg"/>
@@ -182,7 +206,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wRm-qM-HYe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="1Nr-l3-MQH" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="132" y="-589"/>
+            <point key="canvasLocation" x="573.88392857142856" y="-360.86956521739131"/>
         </scene>
     </scenes>
     <resources>
