@@ -9,6 +9,8 @@ import UIKit
 
 class CalculatorViewController: UIViewController {
 
+    var calculatorBrain = CalculatorBrain()
+    
     @IBOutlet weak var billTheTextField: UITextField!
     @IBOutlet weak var zeroPctButton: UIButton!
     @IBOutlet weak var tenPctButton: UIButton!
@@ -37,9 +39,10 @@ class CalculatorViewController: UIViewController {
         sender.isSelected =  true
         
         let buttonTitle = sender.currentTitle!
-        let minusPercentSign = String(buttonTitle.dropLast())
-        let titleAsNumber = Double(minusPercentSign)!
-        tip = titleAsNumber / 100
+//        let minusPercentSign = String(buttonTitle.dropLast())
+//        let titleAsNumber = Double(minusPercentSign)!
+//        tip = titleAsNumber / 100
+        tip = calculatorBrain.getTip(buttonTitle: buttonTitle)
         
         
     }
@@ -52,6 +55,7 @@ class CalculatorViewController: UIViewController {
     @IBAction func calculatePressed(_ sender: UIButton) {
         
         let bill = billTheTextField.text!
+//        finalResult = calculatorBrain.getResult(bill: bill)
         if bill != "" {
             billTotal = Double(bill)!
             let result = billTotal * (1 + tip) / Double(numberOfPeople)
