@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  Clima
 //
-//  Created by Ильгам Ахматдинов on 28.04.2021.
+//  Created by Ильгам Ахматдинов on 30.04.2021.
 //
 
 import UIKit
