@@ -17,9 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="flZ-zn-Eba">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="flZ-zn-Eba">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="K9q-Zq-Sxz">
                                 <rect key="frame" x="20" y="44" width="374" height="818"/>
@@ -35,6 +34,9 @@
                                                 </constraints>
                                                 <color key="tintColor" systemColor="labelColor"/>
                                                 <state key="normal" backgroundImage="location.circle.fill" catalog="system"/>
+                                                <connections>
+                                                    <action selector="locationPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="E20-AH-xZm"/>
+                                                </connections>
                                             </button>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search" textAlignment="right" clearsOnBeginEditing="YES" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="xeK-uN-ZW4">
                                                 <rect key="frame" x="50" y="0.0" width="274" height="40"/>
@@ -102,10 +104,17 @@
                         <viewLayoutGuide key="safeArea" id="kdJ-w9-dS0"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="kdJ-w9-dS0" firstAttribute="trailing" secondItem="flZ-zn-Eba" secondAttribute="trailing" id="7mN-m9-Lgk"/>
+                            <constraint firstAttribute="bottom" secondItem="flZ-zn-Eba" secondAttribute="bottom" id="CAg-mt-vVK"/>
+                            <constraint firstItem="flZ-zn-Eba" firstAttribute="top" secondItem="6bt-y7-ytZ" secondAttribute="top" id="EiZ-6T-5ES"/>
                             <constraint firstItem="K9q-Zq-Sxz" firstAttribute="top" secondItem="kdJ-w9-dS0" secondAttribute="top" id="ISd-is-pr1"/>
+                            <constraint firstAttribute="trailing" secondItem="flZ-zn-Eba" secondAttribute="trailing" id="O0J-Lg-kdL"/>
+                            <constraint firstItem="flZ-zn-Eba" firstAttribute="leading" secondItem="6bt-y7-ytZ" secondAttribute="leading" id="S9Y-HL-NSw"/>
                             <constraint firstItem="kdJ-w9-dS0" firstAttribute="trailing" secondItem="K9q-Zq-Sxz" secondAttribute="trailing" constant="20" id="XI4-iA-YJx"/>
                             <constraint firstItem="K9q-Zq-Sxz" firstAttribute="leading" secondItem="6bt-y7-ytZ" secondAttribute="leading" constant="20" id="az9-e3-5gN"/>
                             <constraint firstItem="kdJ-w9-dS0" firstAttribute="bottom" secondItem="K9q-Zq-Sxz" secondAttribute="bottom" id="bZv-OS-b1M"/>
+                            <constraint firstAttribute="bottom" secondItem="flZ-zn-Eba" secondAttribute="bottom" id="qQd-6O-pGT"/>
+                            <constraint firstItem="flZ-zn-Eba" firstAttribute="leading" secondItem="6bt-y7-ytZ" secondAttribute="leading" id="wCo-9A-p4W"/>
                         </constraints>
                     </view>
                     <connections>
@@ -117,7 +126,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="118"/>
+            <point key="canvasLocation" x="137.27678571428569" y="115.94202898550725"/>
         </scene>
     </scenes>
     <resources>
