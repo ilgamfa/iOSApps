@@ -15,6 +15,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var currencyLabel: UILabel!
     @IBOutlet weak var currencyPicker: UIPickerView!
     
+    @IBOutlet weak var byteStackView: UIStackView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +25,7 @@ class ViewController: UIViewController {
         currencyPicker.dataSource = self
         currencyPicker.delegate = self
         
+        byteStackView.layer.cornerRadius = 40
     }
 
 

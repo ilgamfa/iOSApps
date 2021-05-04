@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -33,7 +32,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WP2-rM-6jf">
                                         <rect key="frame" x="20" y="85" width="374" height="80"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="0We-gi-HmU">
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="0We-gi-HmU">
                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="80"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bitcoinsign.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="cJd-fm-310">
@@ -44,7 +43,7 @@
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="2mq-Ro-AE3">
-                                                        <rect key="frame" x="89.999999999999986" y="25" width="222.66666666666663" height="30"/>
+                                                        <rect key="frame" x="79.999999999999986" y="25" width="242.66666666666663" height="30"/>
                                                         <color key="tintColor" red="0.1068351939" green="0.26235985760000002" blue="0.28235909339999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -64,7 +63,7 @@
                                                 </constraints>
                                             </stackView>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" red="0.69517737629999998" green="0.83263808490000002" blue="0.98041588069999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="0We-gi-HmU" secondAttribute="bottom" id="Ft6-6d-ewH"/>
                                             <constraint firstAttribute="height" constant="80" id="Nwg-PF-kiX"/>
@@ -99,6 +98,7 @@
                     </view>
                     <connections>
                         <outlet property="bitcoinLabel" destination="2mq-Ro-AE3" id="I6f-sd-Ic7"/>
+                        <outlet property="byteStackView" destination="0We-gi-HmU" id="0mu-b8-1Q8"/>
                         <outlet property="currencyLabel" destination="qUy-bQ-Ie9" id="1QL-Ry-uO4"/>
                         <outlet property="currencyPicker" destination="KGk-hM-DyH" id="92H-gd-mU7"/>
                     </connections>
@@ -110,8 +110,5 @@
     </scenes>
     <resources>
         <image name="bitcoinsign.circle.fill" catalog="system" width="128" height="121"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>
